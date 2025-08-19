@@ -2,16 +2,17 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Аудиокниги Онлайн</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аудиокниги Онлайн • Public Domain</title>
   <style>
     :root {
-      --bg-light: #f5f5f5;
-      --bg-dark: #1e1e1e;
-      --text-light: #1e1e1e;
-      --text-dark: #f5f5f5;
+      --bg-light: #fafafa;
+      --bg-dark: #181818;
+      --text-light: #222;
+      --text-dark: #eee;
       --card-light: #fff;
-      --card-dark: #2a2a2a;
+      --card-dark: #2c2c2c;
+      --accent: #4f46e5;
     }
     body {
       margin: 0;
@@ -26,43 +27,45 @@
     }
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
-      background: #6200ea;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: var(--accent);
       color: white;
     }
     header h1 {
       margin: 0;
+      font-size: 1.5rem;
     }
     #themeToggle {
-      padding: 6px 12px;
+      padding: 0.5rem 1rem;
       border: none;
+      background: white;
+      color: var(--accent);
       border-radius: 6px;
       cursor: pointer;
-      background: white;
-      color: #6200ea;
       font-weight: bold;
     }
     #search {
-      width: 100%;
+      width: 90%;
       max-width: 400px;
-      padding: 10px;
-      margin: 20px auto;
-      display: block;
-      border: 1px solid #ccc;
+      margin: 1rem auto;
+      padding: 0.5rem;
+      font-size: 1rem;
       border-radius: 8px;
+      border: 1px solid #ccc;
+      display: block;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      gap: 1rem;
+      padding: 1rem;
     }
     .card {
       background: var(--card-light);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.2s, background 0.3s;
     }
@@ -70,98 +73,228 @@
       background: var(--card-dark);
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
     }
     .card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-    .card h3 {
-      margin: 10px;
-      font-size: 1.1em;
+    .card h3, .card p {
+      margin: 0.5rem 1rem;
     }
     .card p {
-      margin: 0 10px 10px;
-      font-size: 0.9em;
       color: gray;
+      font-size: 0.9rem;
     }
     audio {
       width: 100%;
-      margin-top: 10px;
+      margin: 0.5rem 0 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🎧 Аудиокниги Онлайн</h1>
+    <h1>Аудиокниги Онлайн</h1>
     <button id="themeToggle">🌙 Тема</button>
   </header>
-
   <input type="text" id="search" placeholder="Поиск книги...">
-
   <div class="grid" id="bookGrid">
-    <!-- Примеры книг -->
+    <!-- 20 Бесплатных Аудиокниг -->
+    <!-- 1 -->
     <div class="card">
-      <img src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="Преступление и наказание">
+      <img src="https://covers.openlibrary.org/b/id/8369255-L.jpg" alt="Преступление и наказание">
       <h3>Преступление и наказание</h3>
-      <p>Ф. М. Достоевский</p>
+      <p>Ф. Достоевский</p>
       <audio controls>
-        <source src="https://www.archive.org/download/crime_punishment_1005_librivox/crimeandpunishment_01_dostoyevsky.mp3" type="audio/mpeg">
+        <source src="https://archive.org/download/crimeandpunishment_0902_librivox/crimeandpunishment_01_dostoevsky.mp3" type="audio/mpeg">
       </audio>
     </div>
-
+    <!-- 2 -->
     <div class="card">
       <img src="https://covers.openlibrary.org/b/id/8091016-L.jpg" alt="Анна Каренина">
       <h3>Анна Каренина</h3>
-      <p>Л. Н. Толстой</p>
+      <p>Л. Толстой</p>
       <audio controls>
-        <source src="https://www.archive.org/download/anna_karenina_0909_librivox/annakarenina_01_tolstoy.mp3" type="audio/mpeg">
+        <source src="https://archive.org/download/annakarenina1_1011_librivox/Book%201%20-%20Chapter%2001.mp3" type="audio/mpeg">
       </audio>
     </div>
-
+    <!-- 3 -->
     <div class="card">
-      <img src="https://covers.openlibrary.org/b/id/11153262-L.jpg" alt="Моби Дик">
-      <h3>Moby Dick</h3>
-      <p>Herman Melville</p>
+      <img src="https://covers.openlibrary.org/b/id/10523366-L.jpg" alt="Идиот">
+      <h3>Идиот</h3>
+      <p>Ф. Достоевский</p>
       <audio controls>
-        <source src="https://www.archive.org/download/moby_dick_librivox/mobydick_001_melville.mp3" type="audio/mpeg">
+        <source src="https://archive.org/download/theidiot_2207_librivox/idiot_01_dostoevsky.mp3" type="audio/mpeg">
       </audio>
     </div>
-
+    <!-- 4 -->
     <div class="card">
-      <img src="https://covers.openlibrary.org/b/id/10523366-L.jpg" alt="Приключения Шерлока Холмса">
+      <img src="https://covers.openlibrary.org/b/id/6979861-L.jpg" alt="Война и мир">
+      <h3>Война и мир</h3>
+      <p>Л. Толстой</p>
+      <audio controls>
+        <source src="https://archive.org/download/warandpeace_0913_librivox/warandpeace_01_tolstoy.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 5 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8231852-L.jpg" alt="Мёртвые души">
+      <h3>Мёртвые души</h3>
+      <p>Н. Гоголь</p>
+      <audio controls>
+        <source src="https://archive.org/download/deadsouls_2204_librivox/deadsouls_01_gogol.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 6 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8167223-L.jpg" alt="Шерлок Холмс">
       <h3>Приключения Шерлока Холмса</h3>
-      <p>А. К. Дойл</p>
+      <p>А. Дойл</p>
       <audio controls>
-        <source src="https://www.archive.org/download/adventures_sherlock_holmes/adventuresholmes_01_doyle.mp3" type="audio/mpeg">
+        <source src="https://archive.org/download/adventures_sherlock_holmes_1004_librivox/adv_sherlock_holmes_01_doyle.mp3" type="audio/mpeg">
       </audio>
     </div>
-
+    <!-- 7 -->
     <div class="card">
       <img src="https://covers.openlibrary.org/b/id/5546156-L.jpg" alt="Гамлет">
-      <h3>Hamlet</h3>
-      <p>William Shakespeare</p>
+      <h3>Гамлет</h3>
+      <p>У. Шекспир</p>
       <audio controls>
-        <source src="https://www.archive.org/download/hamlet_0911_librivox/hamlet_01_shakespeare.mp3" type="audio/mpeg">
+        <source src="https://archive.org/download/hamlet_0911_librivox/hamlet_01_shakespeare.mp3" type="audio/mpeg">
       </audio>
     </div>
-    
-    <!-- Добавь ещё 15 книг по тому же шаблону -->
+    <!-- 8 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/11153262-L.jpg" alt="Моби Дик">
+      <h3>Моби Дик</h3>
+      <p>Г. Мелвилл</p>
+      <audio controls>
+        <source src="https://archive.org/download/moby_dick_1009_librivox/mobydick_01_melville.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 9 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/10565705-L.jpg" alt="Джейн Эйр">
+      <h3>Джейн Эйр</h3>
+      <p>Ш. Бронте</p>
+      <audio controls>
+        <source src="https://archive.org/download/janeeyre_0907_librivox/janeeyre_01_brontë.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 10 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/10535934-L.jpg" alt="Грозовой перевал">
+      <h3>Грозовой перевал</h3>
+      <p>Э. Бронте</p>
+      <audio controls>
+        <source src="https://archive.org/download/wutheringheights_0905_librivox/wutheringheights_01_bronte.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 11 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8399254-L.jpg" alt="Белый зуб">
+      <h3>Белый клык</h3>
+      <p>Дж. Лондон</p>
+      <audio controls>
+        <source src="https://archive.org/download/white_klaw_0911_librivox/white_klaw_01_london.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 12 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8272975-L.jpg" alt="Дракула">
+      <h3>Дракула</h3>
+      <p>Б. Стокер</p>
+      <audio controls>
+        <source src="https://archive.org/download/dracula_0912_librivox/dracula_01_stoker.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 13 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8818818-L.jpg" alt="Франкенштейн">
+      <h3>Франкенштейн</h3>
+      <p>М. Шелли</p>
+      <audio controls>
+        <source src="https://archive.org/download/frankenstein_0909_librivox/frankenstein_01_shelley.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 14 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8235948-L.jpg" alt="Оливер Твист">
+      <h3>Оливер Твист</h3>
+      <p>Ч. Диккенс</p>
+      <audio controls>
+        <source src="https://archive.org/download/olivertwist_0906_librivox/olivertwist_01_dickens.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 15 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8236132-L.jpg" alt="Робинзон Крузо">
+      <h3>Робинзон Крузо</h3>
+      <p>Д. Дефо</p>
+      <audio controls>
+        <source src="https://archive.org/download/robinsoncrusoe_0909_librivox/robinsoncrusoe_01_defeo.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 16 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/7375124-L.jpg" alt="Белые зубы">
+      <h3>Белые зубья</h3>
+      <p>Дж. Р. Толкин</p>
+      <audio controls>
+        <source src="https://archive.org/download/hobbit_0907_librivox/hobbit_01_tolkien.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 17 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8027071-L.jpg" alt="Приключения Тома Сойера">
+      <h3>Приключения Тома Сойера</h3>
+      <p>М. Твен</p>
+      <audio controls>
+        <source src="https://archive.org/download/tomsawyer_0911_librivox/tomsawyer_01_twain.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 18 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8132026-L.jpg" alt="Путешествие к центру Земли">
+      <h3>Путешествие к центру Земли</h3>
+      <p>Ж. Верн</p>
+      <audio controls>
+        <source src="https://archive.org/download/journey_to_the_center_of_the_earth_0909_librivox/journey_to_the_center_of_the_earth_01_verne.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 19 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/8097024-L.jpg" alt="Таинственный остров">
+      <h3>Таинственный остров</h3>
+      <p>Ж. Верн</p>
+      <audio controls>
+        <source src="https://archive.org/download/mysteriousisland_0911_librivox/mysteriousisland_01_verne.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <!-- 20 -->
+    <div class="card">
+      <img src="https://covers.openlibrary.org/b/id/11057211-L.jpg" alt="Человек-невидимка">
+      <h3>Человек-невидимка</h3>
+      <p>Г. Уэллс</p>
+      <audio controls>
+        <source src="https://archive.org/download/invisibleman_0906_librivox/invisibleman_01_wells.mp3" type="audio/mpeg">
+      </audio>
+    </div>
   </div>
 
   <script>
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark');
-      themeToggle.textContent = document.body.classList.contains('dark') ? "☀️ Тема" : "🌙 Тема";
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️ Тема' : '🌙 Тема';
     });
 
-    const searchInput = document.getElementById('search');
-    searchInput.addEventListener('input', () => {
-      const value = searchInput.value.toLowerCase();
+    const search = document.getElementById('search');
+    search.addEventListener('input', () => {
+      const term = search.value.toLowerCase();
       document.querySelectorAll('.card').forEach(card => {
-        card.style.display = card.innerText.toLowerCase().includes(value) ? 'block' : 'none';
+        card.style.display = card.innerText.toLowerCase().includes(term) ? '' : 'none';
       });
     });
   </script>
